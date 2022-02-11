@@ -5,7 +5,12 @@ using UnityEngine;
 public class Score : ScriptableObject
 {
 
-    public int nowGameScore = 0;
+    private int _nowGameScore = 0;
+    public int nowGameScore
+    {
+        get { return _nowGameScore; }
+        set { _nowGameScore = value; }
+    }
     
     public void StartGame()
     {
